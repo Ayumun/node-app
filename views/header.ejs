@@ -1,0 +1,17 @@
+<header>
+    <div class="header-nav">
+      <a href="/">やまぐちのBLOG</a>
+      <!-- <p>ようこそ、<%- locals.username %>さん</p> -->
+      <p>ようこそ、<%= locals.username %>さん</p>
+      <ul>
+        <li><a href="/list">記事一覧</a></li>
+        <% if (locals.isLoggedIn) { %>
+          <li><a href="/logout">ログアウト</a></li>
+        <% } else { %>
+          <li><a href="/login">ログイン</a></li>
+        <% } %>
+      </ul>
+    </div>
+    <p>node.js学習ブログ</p>
+  </header>
+  
